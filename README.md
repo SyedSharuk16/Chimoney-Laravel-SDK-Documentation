@@ -1,8 +1,9 @@
-# Chimoney-Laravel-SDK-Documentation
-Installation guide for Chimoney Laravel SDK 
+# Chimoney Laravel SDK Documentation
 
+## Overview
 The Chimoney Laravel SDK provides an easy way to interact with the Chimoney API within your Laravel applications. This guide will walk you through installing, setting up, and using the SDK effectively.
 
+---
 
 ## Installation Instructions
 
@@ -120,11 +121,21 @@ php artisan chimoney:test
 ## Troubleshooting Tips
 
 - **Invalid API Key:** Ensure the `CHIMONEY_API_KEY` in your `.env` file is correct.
-- **Configuration Not Found:** Run `php artisan config:cache` to clear and refresh the configuration cache.
+- **Configuration Not Found:** Run `php artisan config:cache` to clear and refresh the configuration cache. 
+
+  **Potential Issues with Cached Configurations:**
+  - If changes to your `.env` file or configuration files are not taking effect, the cached configuration may be outdated.
+  - Running `php artisan config:cache` will overwrite the cache with the latest configuration.
+  - To fully clear cached configurations, use:
+    ```bash
+    php artisan config:clear
+    ```
+    This will ensure Laravel reloads configurations from scratch.
+
 - **Network Errors:** Verify your internet connection and the `CHIMONEY_BASE_URL`.
 
-For further assistance, refer to the [official documentation](https://chimoney.io/docs) or contact support!
+For further assistance, refer to the [official documentation](https://chimoney.io/docs) or contact support.
 
 ---
 
-Happy coding with Chimoney Laravel SDK!!
+Happy coding with Chimoney Laravel SDK!
